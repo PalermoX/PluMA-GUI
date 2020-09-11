@@ -1,9 +1,197 @@
+/*==========================================================================================*/
+/* Navbar container */
+/*==========================================================================================*/
+
+.navbar {
+    overflow: hidden;
+    background-color:#221D5C;
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+      
+    width: 50%;
+    float: right;
+    padding: 15px;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    float: right;  /* Places "search" on the right end of navbar. */
+
+    width: 10%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+   
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    color:#F2F0DF; /* Text color */
+    display: none;
+    position: absolute;
+
+    background-color:#221D5C;
+    min-width: 100px;
+    padding: 10px;
+   
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    
+    float: bottom; 
+    color: black; 
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .spacing{
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+/*==========================================================================================*/
+/* Checkbox Filter selections Inside dropdown menu */
+/*==========================================================================================*/
+ /* .multiselect{
+    width: 25%;
+} 
+
+
+.selectBox{
+    position: relative;
+}
+
+.selectBox select{
+    width: 100%;
+    font-weight:bold;
+}
+
+.overSelect{
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+
+#checkboxes{
+    display: none;
+    border: 1px #dadada solid;
+}
+
+#checkboxes label{
+    display: block;
+}
+
+#checkboxes label:hover{
+    background-color: grey;
+} 
+*/
+
+
+/*==========================================================================================*/
+/* Recently Used PLug-ins Table */
+/*==========================================================================================*/
+.RUT_dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .RUT_dropbtn:hover, .RUT_dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+  .RUT_dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .RUT_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .RUT_dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .RUT_dropdown a:hover {background-color: #ddd;}
+  
+  .RUT_show {display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Previous Code */
 h1{
     color: rgb(204, 153, 0);
 }
 
 body{
-    background-color: white;
+    /* background-color: #FFFACC; */
+    /* background: rgba(255, 253, 238, 0.9); */
+    background-color: rgb(255, 250, 204);
+    
 }
 
 table {
@@ -23,7 +211,8 @@ tr:nth-child(even) {
 }
 
 .a {
-    background-color: #FFFFE0;
+    /* background-color: #FFFFE0; */
+  
 }
 
 .a:hover{

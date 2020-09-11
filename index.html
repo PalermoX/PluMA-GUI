@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<img src= "biorg.png" width = "150" height = "50" >
+		<!--  <img src= "biorg.png" width = "150" height = "50" > -->
 		<title>PluMA</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,6 +15,91 @@
 	</head>
 
 	<body>
+
+		<div class="navbar">
+			<img src= "biorg.png" width = "150" height = "50" >
+			<div class="dropdown">
+				<button class="dropbtn">Search
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+
+
+					<!-- Search for plug-ins -->
+					<form>
+						<div>Search for plugins here</div>
+						<div>
+							Input Type: <input type="text" placeholder="Input">
+							Output Type: <input type="text" placeholder="OutType">
+							<div>Language: <input type="text" placeholder="Language"></div>
+						</div>
+					</form>
+
+				<div class="spacing"></div>
+
+				<!-- Filter Checkboxes  -->
+				<form>
+					<div class="multiselect" onclick="showCheckboxes()">
+						<div class="overSelect"></div>
+					</div>
+					<div id="checkboxes">
+						<div>
+							<label for="one"><input type="checkbox" id="one"/>File Converters</label>
+							<label for="two"><input type="checkbox" id="two"/>Transformations</label>
+							<label for="three"><input type="checkbox" id="three"/>Correlation</label>
+						</div>
+
+						<div>
+							<label for="four"><input type="checkbox" id="four"/>Visualization</label>
+							<label for="five"><input type="checkbox" id="five"/>Dissimilarity</label>
+							<label for="six"><input type="checkbox" id="six"/>Centrality</label>
+						</div>
+
+						<div>
+							<label for="seven"><input type="checkbox" id="seven"/>Clustering</label>
+							<label for="eight"><input type="checkbox" id="eight"/>Time Series</label>
+							<label for="nine"><input type="checkbox" id="nine"/>External tools</label>
+						</div>
+
+						<div>
+							<label for="ten"><input type="checkbox" id="ten"/>Statistics</label>
+							<label for="eleven"><input type="checkbox" id="eleven"/>Miscellaneous</label>
+							<label for="twelve"><input type="checkbox" id="twelve"/>Favorites</label>
+						</div>
+
+					</div>
+				</form>
+
+				<div class="spacing"></div>
+
+				<form>
+					<div>Plugin | Descriptions</div>
+					<table>
+						<tr>
+							<th>Plugins</th>
+							<th>Descriptions</th>
+						</tr>
+					</table>
+				</form>
+
+				</div>
+			</div>
+		</div> <!-- Close navbar-->
+
+		<div>
+			<div class="spacing"></div>
+				<div class="RUT_dropdown">
+					<button onclick="myFunction()" class="RUT_dropbtn">Recently Used Plugins</button>
+					<div id="myDropdown" class="RUT_dropdown-content">
+						<table>
+							<div><tr>Recently Used 1: </tr></div>
+							<div><tr>Recently Used 2: </tr></div>
+							<div><tr>Recently Used 3: </tr></div>
+						</table>
+					</div>
+				</div>
+			
+		</div>
 
 			<div id="wrapper">
 			</div>
@@ -34,6 +119,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/PlugInPool.js"></script>
       <script>
         require('./assets/js/menu')
 				require('./assets/js/translations')
@@ -57,7 +143,7 @@
 <div> </div>
 
 	<script>
-		const testFolder = '/Users/cesiabulnes/Desktop/PluMA/plugins';
+		const testFolder = '/Users/edwardpalermo/Desktop/seniorProject/PluMA/plugins';
 		const fs = require('fs');
 
 		const plugin_folders_fullpath = fs.readdirSync(testFolder)
@@ -208,7 +294,7 @@ function openModal() {
 						e.preventDefault();
 						e.stopPropagation();
 						child_process.exec(`git status`, {
-							cwd: "/Users/cesiabulnes/Desktop/PluMA/plugins"
+							cwd: "/Users/edwardpalermo/Desktop/seniorProject/PluMA/plugins"
 						}, (error, stdout, stderr) => {
 							if (error) {
 								dialog.showMessageBox({
@@ -252,7 +338,7 @@ function openModal() {
 						e.preventDefault();
 						e.stopPropagation();
 						child_process.exec(`git clone ${aElem.href}`, {
-							cwd: "/Users/cesiabulnes/Desktop/PluMA/plugins"
+							cwd: "/Users/edwardpalermo/Desktop/seniorProject/PluMA/plugins"
 						}, (error, stdout, stderr) => {
 							
 							if (error) {
