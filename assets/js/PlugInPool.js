@@ -12,12 +12,11 @@ function showCheckboxes(){
 
 
 
+
+
 // Handling plug-ins & Description tables dynamically
 //=============================================================================================
 
-let Plugins = [
-    
-]
 
 
 // Recently Used Plugins
@@ -41,3 +40,37 @@ function myFunction() {
       }
     }
   }
+
+
+
+// Button opens down advance search
+//=============================================================================================
+//   let dropdownBtn = document.querySelector('.InsideSearch_menu-btn');
+//   let menuContent = document.querySelector('.InsideSearch_menu-content');
+//   dropdownBtn.addEventListener('click',()=>{
+//      if(menuContent.style.display===""){
+//         menuContent.style.display="block";
+//      } else {
+//         menuContent.style.display="";
+//      }
+//   })
+
+
+  //PushDown content when advanced search opens.
+  //=============================================================================================
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("Accordian_Active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+
+
