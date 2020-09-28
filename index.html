@@ -5,10 +5,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-
-
-	
-
 	<head>
 		<!--  <img src= "biorg.png" width = "150" height = "50" > -->
 		<title>PluMA</title>
@@ -17,44 +13,34 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="import" href="sections/welcome.html">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-		
-
-		
 	</head>
 
 	<body>
-
 		<div class="navbar">
 			<img src= "biorg.png" width = "150" height = "50" >
-			
 			<a href="#home">PluMA: Plugin-based Microbiome Analysis</a>
 
-
 			<div class="dropdown">
-				
 				<button class="dropbtn">Search
 					<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">	
 					<!-- Search for plug-ins -->
 						<div class="spacingTitle"></div>
-
 						<div class="AdvSearch_Background ">
-							<div style="padding-left: 10px">
+							<div>
 								<span class="material-icons">search</span>
-									
-								<input type="text" id="enter" onkeyup="myFunction()" placeholder="Search for plugins here">
+								<input type="text" id="enter" onkeyup="myFunction()" placeholder="Search for plugins here" style="width:fixed">
 								
 									<button class="accordion" style="padding-left: 250px ">
 										<span class="material-icons">filter_alt</span>
 									</button>
 										<div class="Accordian_Panel">
-											Input Type: <input type="text" placeholder="Input">
-											Output Type: <input type="text" placeholder="OutType">
-											<div>Language : <input type="text" placeholder="Language"></div>
-											
-										</div>	
+											Input Type: <input type="text" placeholder="Input"> 
+											Output Type: <input type="text" placeholder="OutType" >
+											<div>Language: <input type="text" placeholder="Language"></div>
+											<div class="spacingTitle"></div>
+										</div>			
 							</div>
 						</div>
 
